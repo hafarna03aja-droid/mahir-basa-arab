@@ -1,0 +1,7 @@
+{
+  "name": "Mahir Arab",
+  "description": "Aplikasi interaktif untuk membantu Anda mahir berbahasa Arab, dilengkapi dengan pembangunan kosakata, pelajaran tata bahasa, dan terjemahan audio Bahasa Indonesia ke Bahasa Arab secara real-time dengan text-to-speech.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
