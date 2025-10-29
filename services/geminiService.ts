@@ -1,4 +1,4 @@
-import { GoogleGenAI, Type, Modality, LiveSession, LiveCallbacks, Blob } from "@google/genai";
+import { GoogleGenAI, Type, Modality, LiveCallbacks, Blob } from "@google/genai";
 import { encode } from '../utils/audioUtils';
 import type { VocabularyItem, TranslationAndAnswer } from "../types";
 
@@ -89,7 +89,7 @@ export const textToSpeech = async (text: string): Promise<string | null> => {
     }
 };
 
-export const createLiveSession = async (callbacks: LiveCallbacks): Promise<LiveSession> => {
+export const createLiveSession = async (callbacks: LiveCallbacks): Promise<any> => {
     return await ai.live.connect({
         model: 'gemini-2.5-flash-native-audio-preview-09-2025',
         callbacks,
@@ -101,7 +101,7 @@ export const createLiveSession = async (callbacks: LiveCallbacks): Promise<LiveS
     });
 };
 
-export const createArabicLiveSession = async (callbacks: LiveCallbacks): Promise<LiveSession> => {
+export const createArabicLiveSession = async (callbacks: LiveCallbacks): Promise<any> => {
     return await ai.live.connect({
         model: 'gemini-2.5-flash-native-audio-preview-09-2025',
         callbacks,
