@@ -2,10 +2,10 @@ import { GoogleGenAI, Type, Modality, LiveSession, LiveCallbacks, Blob } from "@
 import { encode } from '../utils/audioUtils';
 import type { VocabularyItem, TranslationAndAnswer } from "../types";
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.GEMINI_API_KEY || process.env.API_KEY;
 
 if (!API_KEY) {
-    throw new Error("API_KEY environment variable not set");
+    throw new Error("GEMINI_API_KEY environment variable not set");
 }
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
